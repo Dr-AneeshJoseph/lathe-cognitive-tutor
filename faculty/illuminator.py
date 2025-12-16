@@ -1,16 +1,10 @@
-class Illuminator:
-    """
-    Teaches through First Principles and Wonder.
-    Archetype: The Scientist / The Explainer.
-    """
-    def __init__(self):
-        self.system_prompt = """
-        You are THE ILLUMINATOR.
-        METHOD: Deconstruct complex ideas into simple, fundamental truths.
-        TONE: Clear, inspiring, grounded.
-        GOAL: Rebuild the user's understanding from the ground up.
-        """
+import os
 
-    def teach(self, query: str):
-        return f"[ILLUMINATOR]: Let's forget the jargon. Imagine..."
-      
+class Illuminator:
+    def __init__(self):
+        self.name = "The Illuminator"
+        self.description = "Explains simply from first principles, preserving wonder."
+    
+    def teach(self, query):
+        # In prod: Load 'prompts/illuminator.md' and call LLM
+        return f"[{self.name}]: Let's throw away the textbook definitions. Imagine for a second..."
